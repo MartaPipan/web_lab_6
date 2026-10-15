@@ -1,0 +1,62 @@
+.circle-block {
+    position: relative;
+    /* CORRIGIDO: O bloco precisa de ter o tamanho real do círculo (200px) */
+    width: 200px;  
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+}
+
+/* O container do texto que vai rodar infinitamente */
+.circle-text {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    animation: rodarTexto 20s linear infinite; 
+}
+
+.circle-text span {
+    position: absolute;
+    /* Alinha cada letra exatamente no topo central do círculo */
+    left: 50%;
+    top: 0;
+    /* CORRIGIDO: O ponto de rotação agora é o centro exato do círculo (X: 0, Y: 100px para baixo) */
+    transform-origin: 0 100px; 
+    transform: translateX(-50%) rotate(calc(var(--i) * 15.6deg));
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.circle-text .space {
+    display: inline-block;
+}
+
+/* A seta centralizada */
+.circle-arow {
+    position: absolute;
+    width: 40px; 
+    height: 40px;
+    background-image: url('./images/arrow.svg'); 
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* Garante que fica morta no centro, enquanto o texto roda fora */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Animação que faz o texto girar 360 graus */
+@keyframes rodarTexto {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
