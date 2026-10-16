@@ -4,28 +4,36 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    gap: 5px;
 
     color: white;
-    background-color: #0b0a0a;
 }
 
 .main-header {
+    position: relative;  
+
     width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between; 
-    background-color: #0b0a0a; 
     padding: 15px 30px;
     width: 100%;
     box-sizing: border-box;
-    border-bottom: 2px solid #333; 
+
+   background-image: linear-gradient(to bottom, rgba(3, 3, 3, 0.973), rgba(8, 8, 8, 0.075));
+
 }
 .nav-left {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 5px;
+
+     /* SOLUÇÃO PROTETORA: Garante que o menu ocupa no máximo 40% e não toca no centro 
+     Ao definir flex: 0 1 45% tanto para o .nav-left e para .action-right: 
+     "os dois podem encolher se o ecrã for pequeno, mas nenhum de vocês pode ter mais de 45% da largura total do cabeçalho"*/
+
+    flex: 0 1 45%; 
 }
 
 .nav-item a {
@@ -42,15 +50,13 @@
 .nav-item a:hover {
     color: #ff9800;
 }
-.logo-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+@media screen and (min-width: 1200px) {
+    .nav-item.mobile {
+        display: none;
+    }
 }
-.logo-img {
-    height: 40px;
-    width: auto;
-}
+
 
 .action-right {
     display: flex;
@@ -86,11 +92,23 @@
 }  
 
 .hidden-father {
-    font-size: 80px; 
-    margin: 20px 0;
+  display: flex;
+  justify-content: space-between; 
+  transform: scaleY(1.3);            
+  transform-origin: center; 
+  letter-spacing: 20px;       
+  
+  margin: 0; 
+  text-transform: uppercase;
 }
 
 .heading {
-    font-size: 22px;
+    font-size: 20px;
+    letter-spacing: 5px;
+}
+
+.star img {
+    width: 15px;
+    height: 15px;
 }
 

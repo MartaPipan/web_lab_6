@@ -1,0 +1,70 @@
+.green {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    color: white;
+}
+
+.main-header {
+    /* Tornou-se a referência relativa para o posicionamento do logo */
+    position: relative; 
+    
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between; 
+    padding: 15px 30px;
+    box-sizing: border-box;
+    background-image: linear-gradient(to bottom, rgba(3, 3, 3, 0.973), rgba(8, 8, 8, 0.075));
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Alterado de 'auto' para um valor fixo (ex: 15px) para funcionar corretamente */
+}
+
+.nav-item a {
+    color: #ffffff;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    padding: 10px 20px;
+    transition: color 0.3s ease;
+}
+
+.nav-item a:hover {
+    color: #ff9800;
+}
+
+.logo-container {
+
+    position: absolute;
+    left: 50%;
+    
+    /* Puxa o container 50% da sua própria largura de volta para a esquerda, */
+    /* garantindo o centro matemático perfeito */
+    transform: translateX(-50%);
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-img {
+    height: 40px;
+    width: auto;
+}
+
+.action-right {
+    display: flex;
+    justify-content: flex-end; 
+    flex-grow: 1;
+    max-width: 50%; 
+}
