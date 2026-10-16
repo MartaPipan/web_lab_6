@@ -20,7 +20,7 @@
     justify-content: space-between; 
     padding: 15px 40px;
     box-sizing: border-box;
-    background-image: linear-gradient(to bottom, rgba(3, 3, 3, 0.973), rgba(8, 8, 8, 0.075));
+   /* background-image: linear-gradient(to bottom, rgba(3, 3, 3, 0.973), rgba(8, 8, 8, 0.075));*/
 }
 
 .nav-left {
@@ -123,4 +123,27 @@
     .mobil-word  {
         display: none; 
     }
+
+    .main-header {
+        width: 100%;
+        padding: 10px 20px;
+    }
+
+    .nav-left {
+        width: 100%;
+        display: flex;
+        flex-grow: 1;          
+        justify-content: flex-end; 
+        align-items: center;
+        gap: 12px;             
+    }
+
+    .nav-item a {
+        font-size: 12px;       
+        padding: 8px 12px;     
+        letter-spacing: 0.5px;
+    }
 }
+
+
+

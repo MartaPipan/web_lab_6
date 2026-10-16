@@ -19,7 +19,7 @@ html, body {
     min-width: 1021px;
     background-image: url('../images/FFTablet_1100x.progressive.webp');
     
-    background-position: center;
+    background-position: center top;
     background-repeat: no-repeat; 
 
     background-size: 100%;
@@ -27,5 +27,12 @@ html, body {
     display: flex;
     flex-direction: column; 
     justify-content: space-between; 
+}
+
+@media screen and (max-width: 1200px) {
+   
+    html, body, .container {
+        min-width: 0; 
+    }
 }
 
