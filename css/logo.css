@@ -50,7 +50,7 @@
     
     /* Puxa o container 50% da sua própria largura de volta para a esquerda, */
     /* garantindo o centro matemático perfeito */
-    transform: translateX(-50%);
+    transform: translateX(-100%);
     
     display: flex;
     justify-content: center;
