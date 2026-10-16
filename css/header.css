@@ -20,7 +20,9 @@
     justify-content: space-between; 
     padding: 15px 40px;
     box-sizing: border-box;
-   /* background-image: linear-gradient(to bottom, rgba(3, 3, 3, 0.973), rgba(8, 8, 8, 0.075));*/
+    background-image: linear-gradient(to bottom, rgba(3, 3, 3, 0.973), rgba(8, 8, 8, 0.233));
+    box-shadow: 0px 4px 15px 5px rgba(11, 10, 10, 0.5);
+
 }
 
 .nav-left {
@@ -135,7 +137,7 @@
         flex-grow: 1;          
         justify-content: flex-end; 
         align-items: center;
-        gap: 12px;             
+        gap: 1px;             
     }
 
     .nav-item a {
@@ -144,7 +146,7 @@
         letter-spacing: 0.5px;
     }
     .heading {
-    font-size: 12px;
+    font-size: 16px;
     letter-spacing: 3px;
     }
 }
